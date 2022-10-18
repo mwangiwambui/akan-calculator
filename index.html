@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Page Title</title>
-<link rel="stylesheet" href="style.css"></link>
-<script src="script.js"></script>
-</head>
-<body>
-<div class="main">
-    <div class="section">
-        <h1>Welcome to the Akan Calculator</h1>
-        <p>This is a smmall web application that takes a user's birthday and calculates the day of the week they were born and depending on their gender outputs their Akan name.</p>
-        <p>Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day of the week they were born.</p>
-    </div>
-    <div class="section">
-        <h1>Calculate Akan Name</h1>
-        <form>
-            <input id="birthday-input" name="birthday-input" type="" class=""/>
-            <input id="gender" name="gender" type="" class=""/>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-    <div class="section"></div>
 
-</div>
+<head>
+    <title>Akan Calculator</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    </link>
+    <!-- Script -->
+    <script src="script.js"></script>
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="main flex-container">
+        <div class="header"></div>
+        <div class="section landing">
+            <h1>Welcome to the Akan Calculator</h1>
+            <img src="assets/hbd.png" />
+            <p>This is a small web application that takes a user's birthday and calculates the day of the week they
+                were born and depending on their gender outputs their Akan name.</p>
+            <p>Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as
+                a 'day name' which corresponds to the day of the week they were born.</p>
+        </div>
+        <div class="section">
+            <h1>Calculate Akan Name</h1>
+            <form>
+                <input id="birthday-input" name="birthday-input" type="" class="" />
+                <input id="gender" name="gender" type="" class="" />
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <!-- <div class="section"></div> -->
+        <div class="footer"></div>
+    </div>
 </body>
+
 </html>
