@@ -10,6 +10,9 @@
     <script src="script.js"></script>
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script> -->
 
 </head>
 
@@ -17,19 +20,30 @@
     <div class="main flex-container">
         <div class="header">
             <nav>
-                <a>Akan Calculator</a>
+                <a href="index.html">Akan Calculator</a>
             </nav>
         </div>
         <div class="section landing">
-            <h1>Welcome to the AKAN CALCULATOR</h1>
+
             <div class="flex-row">
-                <p  style="color: gainsboro;" id="description">This is a small web application that takes a user's birthday and calculates
-                    the
-                    day of the week they
-                    were born and depending on their gender outputs their Akan name. Akan names are derived from Ghanian
-                    culture. Frequently in Ghana, children are given their first name as
-                    a 'day name' which corresponds to the day of the week they were born.</p>
+                <div class="flex-item">
+                    <div style="max-width:fit-content">
+                        <h1 style="font-size: 2.6em;">Welcome to the AKAN CALCULATOR <i
+                                class="fa-solid fa-arrow-down"></i></h1>
+                        <!-- <i class="fa-regular fa-calendar"></i> -->
+                    </div>
+                    <p style="color: gainsboro;" id="description">This is a small web application that takes a user's
+                        birthday and calculates
+                        the
+                        day of the week they
+                        were born and depending on their gender outputs their Akan name. Akan names are derived from
+                        Ghanian
+                        culture. Frequently in Ghana, children are given their first name as
+                        a 'day name' which corresponds to the day of the week they were born.</p>
+                </div>
+                <div>
                     <img id="landingImage" src="assets/hbd.png" />
+                </div>
             </div>
         </div>
         <div class="section">
@@ -43,7 +57,7 @@
                     <option value="male">Male</option>
                 </select><br>
                 <button type="button" onclick="getAkanNameAndCalculate()">Submit</button>
-                <p id="output"></p>
+                <p id="validOutput"></p>
             </form>
             <div>
 
@@ -51,6 +65,22 @@
         </div>
         <!-- <div class="section"></div> -->
         <div class="footer"></div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Akan Result</h2>
+              </div>
+              <div class="modal-body">
+                <p id="output"></p>
+              </div>
+        </div>
+
     </div>
 </body>
 
