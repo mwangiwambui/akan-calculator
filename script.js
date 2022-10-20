@@ -6,10 +6,10 @@ let day, month, year, cc, yy;
 
 function getAkanName(v1, gender) {
     if (gender == 'Male') {
-        akanName = "Your Akan name is" + akanMaleNames[v1]
+        akanName = "Your Akan name is " + akanMaleNames[v1-1]
     }
     else {
-        akanName = "Your Akan name is" + akanFemaleNames[v1];
+        akanName = "Your Akan name is " + akanFemaleNames[v1-1];
     }
 }
 
@@ -27,7 +27,6 @@ function validateDate(inputDate) {
         year = parseInt(pdate[2]);
         cc = year / 100;
         yy = year % 100;
-        console.log(pdate)
         if (month > 0 && month < 13) {
             if (year % 4 == 0 && leapyear[month - 1] < day) {
                 alert('Invalid day of the month!');
@@ -62,7 +61,8 @@ function getAkanNameAndCalculate() {
     gender = document.getElementById('gender').value;
     const dateInput = document.getElementById('birthdayInput').value;
     if (validateDate(dateInput)) {
-        akanIndex = calculateAkan();
+        akanIndex = parseInt(calculateAkan());
+        console.log(akanIndex);
         getAkanName(akanIndex, gender);
         document.getElementById("output").innerHTML = akanName
     } else {
