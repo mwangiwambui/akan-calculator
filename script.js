@@ -7,10 +7,10 @@ let day, month, year, cc, yy;
 function getAkanName(v1, gender) {
     console.log(gender)
     if (gender == 'male') {
-        akanName = "Your Akan name is " + akanMaleNames[v1-1]
+        akanName = "Your Akan name is " + akanMaleNames[v1 - 1]
     }
     else {
-        akanName = "Your Akan name is " + akanFemaleNames[v1-1];
+        akanName = "Your Akan name is " + akanFemaleNames[v1 - 1];
     }
 }
 
@@ -51,7 +51,6 @@ function validateDate(inputDate) {
         return false;
     }
     return (true);
-
 }
 
 function calculateAkan() {
@@ -70,4 +69,5 @@ function getAkanNameAndCalculate() {
         document.getElementById("output").innerHTML = 'Enter a valid date';
     }
 }
+
 

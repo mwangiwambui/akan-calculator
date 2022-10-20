@@ -15,30 +15,38 @@
 
 <body>
     <div class="main flex-container">
-        <div class="header"></div>
+        <div class="header">
+            <nav>
+                <a>Akan Calculator</a>
+            </nav>
+        </div>
         <div class="section landing">
-            <h1>Welcome to the Akan Calculator</h1>
-            <img src="assets/hbd.png" />
-            <p>This is a small web application that takes a user's birthday and calculates the day of the week they
-                were born and depending on their gender outputs their Akan name.</p>
-            <p>Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as
-                a 'day name' which corresponds to the day of the week they were born.</p>
+            <h1>Welcome to the AKAN CALCULATOR</h1>
+            <div class="flex-row">
+                <p  style="color: gainsboro;" id="description">This is a small web application that takes a user's birthday and calculates
+                    the
+                    day of the week they
+                    were born and depending on their gender outputs their Akan name. Akan names are derived from Ghanian
+                    culture. Frequently in Ghana, children are given their first name as
+                    a 'day name' which corresponds to the day of the week they were born.</p>
+                    <img id="landingImage" src="assets/hbd.png" />
+            </div>
         </div>
         <div class="section">
             <h1>Calculate Akan Name</h1>
             <form name="akanForm">
                 <label for="birthday-input">Birthday Date: </label>
-                <input id="birthdayInput" name="birthdayInput" type="text" placeholder="dd/mm/yyyy"/ required>
-                <label for="gender">Pick Gender: </label>
+                <input id="birthdayInput" name="birthdayInput" type="text" placeholder="dd/mm/yyyy" / required>
+                <label for="gender">Pick Gender: </label><br>
                 <select name="gender" id="gender" required>
                     <option value="female">Female</option>
                     <option value="male">Male</option>
-                </select>
+                </select><br>
                 <button type="button" onclick="getAkanNameAndCalculate()">Submit</button>
-                <p id ="output"></p>
+                <p id="output"></p>
             </form>
             <div>
-                
+
             </div>
         </div>
         <!-- <div class="section"></div> -->
