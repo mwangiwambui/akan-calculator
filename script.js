@@ -14,31 +14,33 @@ function getAkanName(v1, gender) {
 }
 
 function validateDate(inputDate) {
+    console.log(inputDate);
     const leapyear = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
     const commonYear = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-    const dateformat = /^[0-3]?[0-9]\/[01]?[0-9]\/[12][90][0-9][0-9]$/
+    // const dateformat = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(0[1-9]|1[1-9]|2[1-9])$/;
+    const dateformat = /^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/;
 
-    if (inputDate.value.match(dateformat)) {
-        var pdate = inputDate.value.split('/');
+    if (inputDate.match(dateformat)) {
+        var pdate = inputDate.split('/');
         day = parseInt(pdate[0]);
         month = parseInt(pdate[1]);
         year = parseInt(pdate[2]);
         cc = year / 100;
         yy = year % 100;
-
+        console.log(pdate)
         if (month > 0 && month < 13) {
-            if (month % 4 == 0 && leapyear[month - 1] != day) {
-                alert('Invalid date format!');
+            if (year % 4 == 0 && leapyear[month - 1] < day) {
+                alert('Invalid day of the month!');
                 document.akanForm.birthdayInput.focus();
                 return false;
             }
-            else if (commonYear[month - 1] != day) {
-                alert('Invalid date format');
+            else if (commonYear[month - 1] < day) {
+                alert('Invalid day of the month');
                 document.akanForm.birthdayInput.focus();
                 return false;
             }
         } else {
-            alert('Invalid date format');
+            alert('Invalid month of the year');
             document.akanForm.birthdayInput.focus();
             return false;
         }
