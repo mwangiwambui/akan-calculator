@@ -5,7 +5,8 @@ let akanIndex, gender;
 let day, month, year, cc, yy;
 
 function getAkanName(v1, gender) {
-    if (gender == 'Male') {
+    console.log(gender)
+    if (gender == 'male') {
         akanName = "Your Akan name is " + akanMaleNames[v1-1]
     }
     else {
