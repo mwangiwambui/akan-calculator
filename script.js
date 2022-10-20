@@ -2,7 +2,7 @@ const akanMaleNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"]
 const akanFemaleNames = ["Akosue","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"]
 let akanName = "";
 let akanIndex, gender;
-let day,month,year;
+let day,month,year,cc, yy;
 
 function getAkanName(v1, gender){
     if (gender == 'Male'){
@@ -22,7 +22,9 @@ function validateDate(inputDate){
         var pdate = inputDate.value.split('/');
         day = parseInt(pdate[0]);
         month = parseInt(pdate[1]);
-        year = parseInt(pdate[2])
+        year = parseInt(pdate[2]);
+        cc = year/100;
+        yy = year%100;
 
         if (month > 0 && month < 13){
             if (month % 4 == 0 && leapyear[month-1] != day){
@@ -39,6 +41,11 @@ function validateDate(inputDate){
         alert('Invalid date format')
     }
 
+}
+
+function calculateAkan(){
+    akanIndex = ( ( (cc/4) -2*cc-1) + ((5*yy/4) ) + ((26*(month+1)/10)) + day ) % 7;
+    getAkanName(akanIndex);
 }
 
 
