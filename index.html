@@ -26,15 +26,15 @@
         </div>
         <div class="section">
             <h1>Calculate Akan Name</h1>
-            <form>
+            <form name="akanForm">
                 <label for="birthday-input">Birthday Date: </label>
-                <input id="birthday-input" name="birthday-input" type="text" placeholder="dd/mm/yyyy"/ required>
+                <input id="birthdayInput" name="birthdayInput" type="text" placeholder="dd/mm/yyyy"/ required>
                 <label for="gender">Pick Gender: </label>
                 <select name="gender" id="gender" required>
                     <option value="female">Female</option>
                     <option value="male">Male</option>
                 </select>
-                <button type="button" onclick="getAkanName(birthday-input,gender)">Submit</button>
+                <button type="button" onclick="getAkanNameAndCalculate()">Submit</button>
                 <p id ="output"></p>
             </form>
             <div>
